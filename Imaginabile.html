@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Imaginabile</title>
+<style>
+:root{--bg:#ffffff;--fg:#111111;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#121212;--fg:#f2f2f2}}
+:root[data-theme="dark"]{--bg:#121212;--fg:#f2f2f2}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;min-height:100vh;display:flex;flex-direction:column;background:var(--bg);color:var(--fg);font-family:Georgia,"Times New Roman",serif}
+header{padding:14px 20px}
+.brand{font-size:1rem;font-weight:300;letter-spacing:.04em;margin:0;text-align:left}
+main{flex:1}
+footer{background:#000;color:#f2f2f2;padding:20px;font-size:.75rem;font-weight:300;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+.links{display:flex;flex-direction:row;gap:24px}
+.links a{font-size:.8rem;font-weight:400;text-decoration:none}
+.links a:hover{text-decoration:underline}
+footer p{margin:0;color:#aaa;line-height:1.5;max-width:60ch}
+details{max-width:960px;margin-top:20px;border-top:1px solid #333}
+summary{cursor:default;padding:10px 0;font-size:.8rem;font-weight:400;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary:focus-visible,a:focus-visible{outline:2px solid #fff;outline-offset:3px}
+h3{font-size:1rem;margin:20px 0 8px}
+.tbl{overflow-x:auto}
+table{width:100%;border-collapse:collapse;margin-bottom:10px}
+.entity,.copy{max-width:960px;margin:16px 0 0;color:#aaa}
+.copy{margin-top:6px;color:#777}
+caption{text-align:left;font-weight:400;padding-bottom:6px}
+th,td{text-align:left;padding:5px 8px;border:1px solid #333}
+th{background:#111;font-weight:400}
+a{color:#fff}
+main{--line:#d0d0d0}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) main{--line:#333}}
+:root[data-theme="dark"] main{--line:#333}
+main details{width:100%;max-width:none;margin:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+main summary{padding:10px 20px}
+main summary:focus-visible{outline:1px solid var(--fg)}
+main .tbl{padding:0 20px 6px}
+main table{margin:0 0 14px}
+main caption{padding:6px 0}
+main th,main td{border:1px solid var(--line);padding:12px}
+main th{background:transparent}
+.boxes{display:flex;gap:8px}
+main table table{margin:0}
+.win{border:1px solid var(--fg);min-height:240px;padding:10px;display:flex;flex-direction:column;gap:10px}
+.win .boxes{flex-direction:column}
+.win .box{flex:none;justify-content:flex-start;padding:0 10px}
+.box[hidden]{display:none}
+.searchbar{display:flex;gap:6px}
+.searchbar input{flex:1;min-width:0;height:26px;border:1px solid var(--line);background:transparent;color:inherit;font:inherit;font-size:.75rem;padding:0 8px;border-radius:0}
+.sbtn{height:26px;padding:0 12px;border:1px solid var(--fg);background:transparent;color:inherit;font:inherit;font-size:.75rem;border-radius:0;cursor:pointer}
+.searchbar input:focus-visible,.sbtn:focus-visible{outline:1px solid var(--fg)}
+#none{margin:0;font-size:.75rem}
+.box{flex:1;height:26px;display:flex;align-items:center;justify-content:center;border:1px solid var(--fg);border-radius:0;font-size:.75rem;font-weight:300}
+.link{background:none;border:0;padding:0;font:inherit;color:inherit;text-decoration:underline;cursor:pointer}
+.link:focus-visible{outline:1px solid var(--fg);outline-offset:2px}
+main a{color:var(--fg)}
+#dy-panel{margin-top:10px}
+#dy-panel p{margin:0 0 8px;font-size:.75rem}
+#dy-frame{display:block;width:100%;height:70vh;min-height:420px;border:1px solid var(--line);background:#fff}
+</style>
+</head>
+<body>
+<header><h1 class="brand">Imaginabile</h1></header>
+<main>
+  <details open>
+    <summary>Explore</summary>
+    <div class="tbl">
+      <table>
+        <caption>Products</caption>
+        <tbody>
+          <tr><td><table class="sub"><caption>Series</caption><tbody><tr><td><div class="win">
+<div class="searchbar"><input type="search" id="q" placeholder="Search" aria-label="Search series"><button type="button" id="qbtn" class="sbtn">Search</button></div>
+<div class="boxes" id="items"><div class="box">Unsettling Experiences</div></div>
+<p id="none" hidden>No results</p>
+</div></td></tr></tbody></table></td></tr>
+        </tbody>
+      </table>
+      <table>
+        <caption>Identities Of Imaginabile</caption>
+        <tbody>
+          <tr><td>Disturbs You
+            <div id="dy-panel">
+              <p><a href="https://hnx.github.io/DisturbsYou" target="_blank" rel="noopener">hnx.github.io/DisturbsYou</a></p>
+              <iframe id="dy-frame" title="Disturbs You" src="https://hnx.github.io/DisturbsYou"></iframe>
+            </div></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </details>
+</main>
+<footer>
+  <nav class="links" aria-label="Footer">
+    <a href="about.html">About</a>
+    <a href="updates.html">Updates</a>
+  </nav>
+
+  <details open>
+    <summary>Connect with us</summary>
+    <div class="tbl">
+      <table>
+        <caption>Digital Media Identifiers</caption>
+        <thead><tr><th>Platform</th><th>Link</th></tr></thead>
+        <tbody>
+          <tr><td>YouTube</td><td>@Imaginabile</td></tr>
+          <tr><td>X</td><td>@Imaginabile</td></tr>
+          <tr><td>Instagram</td><td>@Imaginabile</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tbl">
+      <table>
+        <caption>Contact Us</caption>
+        <thead><tr><th>Purpose</th><th>ID</th></tr></thead>
+        <tbody>
+          <tr><td>General Inquiries</td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </details>
+
+  <p class="entity">An entity under <a href="https://hnx.github.io/PEFFUS" target="_blank" rel="noopener">PEFFUS</a> Entertainment</p>
+  <p class="copy">&copy; 2026 Imaginabile. All rights reserved.</p>
+</footer>
+<script>
+document.querySelectorAll('summary').forEach(function(s){s.addEventListener('click',function(e){e.preventDefault();});});
+var q=document.getElementById('q'),items=document.getElementById('items'),none=document.getElementById('none');
+function runSearch(){var t=q.value.trim().toLowerCase(),n=0;items.querySelectorAll('.box').forEach(function(b){var m=b.textContent.toLowerCase().indexOf(t)>-1;b.hidden=!m;if(m)n++;});none.hidden=n>0;}
+q.addEventListener('input',runSearch);
+document.getElementById('qbtn').addEventListener('click',runSearch);
+</script>
+</body>
+</html>
